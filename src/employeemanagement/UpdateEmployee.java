@@ -332,7 +332,6 @@ public class UpdateEmployee extends JFrame implements ActionListener {
                         // Check if all required fields are filled
                         if (!fname.isEmpty() && !salary.isEmpty() && !address.isEmpty() && !phone.isEmpty()
                                 && !email.isEmpty() && !education.isEmpty()) {
-                            System.out.println(employeeID);
                             // Create the updated data line
                             String updatedLine = employeeID + "," + name + "," + fname + "," + dob
                                     + "," + salary + "," + address + "," + phone + "," + email + "," + education;
