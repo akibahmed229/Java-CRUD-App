@@ -320,8 +320,9 @@ public class UpdateEmployee extends JFrame implements ActionListener {
                         String email = tfemail.getText();
                         String education = tfeducation.getText();
 
+                        // Check if the empId is empty
                         if (empId.isEmpty()) {
-                            empId = cEmpID.getSelectedItem();
+                            empId = cEmpID.getSelectedItem(); // Set the empId to the selected item
                         }
 
                         // Check if all required fields are filled
