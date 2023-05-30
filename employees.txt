@@ -1,0 +1,9 @@
+865342,Akib,Atiqur Islam,May 1 2000,1000000,Dhaka Mirpur-1,01829750007,akib4418@gmail.com,BSC
+32120,yeanur,rashid,May 2 2023,121434513,afaf af,1435262462,asrREA@hma.com,BA
+779922,sakib,khan,May 8 2023,12313455,23542626,135146146,Drwr@mai.com,BSSC
+592603,pollob,dash,May 4 2023,1243143,adsd asfdfakfl f,12413513613613,pollo@mail.com,MSC
+182587,Himel,hasasn,May 1 2023,12434,sff fafsaf faafafa,25352524,asfdf@mail.com,MSC
+446064,Ishmam,Mohiuddin,May 9 2023,131243,ada asfdaff,2141352165135,guma@gmail.com,BBA
+152733,Britto,Kala mastan,May 2 2023,342524524,afsaf fafsf,12145245246,Britto@mail.com,BBA
+570764,Naihan,Sadab,May 5 2023,3412,Dhaka mirpur2,1341351351351,Naihan@mail.com,BTECH
+631103,Jamim,Jubaire,May 17 2000,2314,asdaf fsfa,3124325454,jamim@mail.com,BBA
