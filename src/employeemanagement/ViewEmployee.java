@@ -1,3 +1,12 @@
+/*
+ * Employee Management - View and Update
+ * Author: Akib Ahmed
+ * Project: Employee Management System
+ * Created: 2023-05-28
+ * Last Modified: 2023-05-29
+ * Description: The application reads the employee data from a file and allows users to interact with it.
+ */
+// Import statements and class declaration go here
 package employeemanagement;
 
 import java.awt.*;
@@ -6,6 +15,7 @@ import javax.swing.*;
 import javax.swing.table.*;
 import java.io.*;
 
+// Code implementation and logic go here
 public class ViewEmployee extends JFrame implements ActionListener {
 
     JTable table; // Variable to hold the table component.

@@ -1,3 +1,12 @@
+/*
+ * Employee Management - Remove Employee
+ * Author: Akib Ahmed
+ * Project: Employee Management System
+ * Created: 2023-05-28
+ * Last Modified: 2023-05-29
+ * Description:  This screen allows the user to remove an employee from the OS database.
+ */
+// Import statements and class declaration go here
 package employeemanagement;
 
 import java.awt.*;
@@ -9,6 +18,7 @@ import java.io.FileWriter;
 import java.io.IOException;
 import javax.swing.*;
 
+// Code implementation and logic go here
 public class RemoveEmployee extends JFrame implements ActionListener {
 
     Choice cEmpID; // Declaring Choice component

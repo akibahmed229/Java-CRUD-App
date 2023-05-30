@@ -1,9 +1,19 @@
+/*
+ * Login Screen
+ * Author: Akib Ahmed
+ * Project: Employee Management System
+ * Created: 2023-05-28
+ * Last Modified: 2023-05-29
+ * Description: : This is the login screen where only the administrator can login. It provides access to the admin panel for managing the system.
+ */
+// Import statements and class declaration go here
 package employeemanagement;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+// Code implementation and logic go here
 public class Login extends JFrame implements ActionListener {
 
     JTextField tfusername, tfpassword; // Declaring the text fields

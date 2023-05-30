@@ -1,9 +1,19 @@
+/*
+ * Splash Screen
+ * Author: Akib Ahmed
+ * Project: Employee Management System
+ * Created: 2023-05-28
+ * Last Modified: 2023-05-29
+ * Description: This program manages employee details and performs CRUD operations using Java AWT & Swing.
+ */
+// Import statements and class declaration go here
 package employeemanagement;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+// Code implementation and logic go here
 public class Splash extends JFrame implements ActionListener {
 
     // Constructor

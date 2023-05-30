@@ -1,9 +1,19 @@
+/*
+ * Home Screen
+ * Author: Akib Ahmed
+ * Project: Employee Management System
+ * Created: 2023-05-28
+ * Last Modified: 2023-05-29
+ * Description: It serves as the main interface for managing employee records in the system.
+ */
+// Import statements and class declaration go here
 package employeemanagement;
 
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
+// Code implementation and logic go here
 public class Home extends JFrame implements ActionListener {
 
     JButton addBtn, viewBtn, updateBtn, removeBtn; // Declaring all the buttons

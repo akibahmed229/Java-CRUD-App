@@ -1,3 +1,12 @@
+/*
+ * Employee Creation
+ * Author: Akib Ahmed
+ * Project: Employee Management System
+ * Created: 2023-05-28
+ * Last Modified: 2023-05-29
+ * Description: It provides a form for entering employee information such as name, date of birth, salary, address, contact details, and education.
+ */
+// Import statements and class declaration go here
 package employeemanagement;
 
 import java.awt.*;
@@ -8,6 +17,7 @@ import java.text.SimpleDateFormat;
 import java.util.*;
 import java.io.*;
 
+// Code implementation and logic go here
 public class AddEmployee extends JFrame implements ActionListener {
 
     // Declaring Date Chooser variable
