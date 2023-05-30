@@ -1,3 +1,12 @@
+/*
+ * Employee Management - Update Employee
+ * Author: Akib Ahmed
+ * Project: Employee Management System
+ * Created: 2023-05-28
+ * Last Modified: 2023-05-29
+ * Description: This screen allows the user to update employee records stored in the OS database.
+ */
+// Import statements and class declaration go here
 package employeemanagement;
 
 import java.awt.*;
@@ -7,6 +16,7 @@ import java.util.*;
 import java.io.*;
 import java.util.List;
 
+// Code implementation and logic go here
 public class UpdateEmployee extends JFrame implements ActionListener {
 
     // Declaring normal text variable
@@ -301,7 +311,7 @@ public class UpdateEmployee extends JFrame implements ActionListener {
                     String[] fields = line.split(",");
 
                     // Check if the first field (empId) matches the desired empId
-                    if (fields.length > 0 && fields[0].equals(empId)) {
+                    if (fields.length > 0 && fields[0].equals(empId) || fields[0].equals(cEmpID.getSelectedItem())) {
                         // Update the employee details
                         String fname = tffname.getText();
                         String salary = tfsalary.getText();
@@ -309,6 +319,10 @@ public class UpdateEmployee extends JFrame implements ActionListener {
                         String phone = tfphone.getText();
                         String email = tfemail.getText();
                         String education = tfeducation.getText();
+
+                        if (empId.isEmpty()) {
+                            empId = cEmpID.getSelectedItem();
+                        }
 
                         // Check if all required fields are filled
                         if (!fname.isEmpty() && !salary.isEmpty() && !address.isEmpty() && !phone.isEmpty()
