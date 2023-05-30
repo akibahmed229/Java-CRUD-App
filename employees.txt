@@ -1,4 +1,8 @@
+<<<<<<< HEAD
 233922,Akib,Ahmed,May 1 2000,1000000,Dhaka,18989214239,akib4418@gmail.com,BSC
+=======
+865342,Akib,Ahmad,May 1 2000,1000000,Dhaka ,245642624626,akib4418@gmail.com,BSC
+>>>>>>> d5cfaef38c7a5b4fe15890c265aec366a2b12bc7
 32120,yeanur,rashid,May 2 2023,121434513,afaf af,1435262462,asrREA@hma.com,BA
 779922,sakib,khan,May 8 2023,12313455,23542626,135146146,Drwr@mai.com,BSSC
 592603,pollob,Chondro Dash,May 4 2023,1243143,adsd asfdfakfl f,12413513613613,pollo@mail.com,MSC
