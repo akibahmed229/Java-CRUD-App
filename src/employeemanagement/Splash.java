@@ -4,7 +4,7 @@
  * Project: Employee Management System
  * Created: 2023-05-28
  * Last Modified: 2023-05-29
- * Description: This program manages employee details and performs CRUD operations using Java AWT & Swing.
+ * Description: The Splash Screen provides a visually appealing introduction to the application.
  */
 // Import statements and class declaration go here
 package employeemanagement;

@@ -295,6 +295,10 @@ public class UpdateEmployee extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         // If the Update button is clicked
         if (ae.getSource() == updateBtn) {
+            String employeeID = !empId.isEmpty() ? empId : cEmpID.getSelectedItem();
+            String name = lblname.getText();
+            String dob = lbldob.getText();
+
             // Specify the file path where you have stored the employee details
             String filePath = "employees.txt";
 
@@ -311,7 +315,7 @@ public class UpdateEmployee extends JFrame implements ActionListener {
                     String[] fields = line.split(",");
 
                     // Check if the first field (empId) matches the desired empId
-                    if (fields.length > 0 && fields[0].equals(empId) || fields[0].equals(cEmpID.getSelectedItem())) {
+                    if (fields.length > 0 && fields[0].equals(employeeID)) {
                         // Update the employee details
                         String fname = tffname.getText();
                         String salary = tfsalary.getText();
@@ -321,15 +325,16 @@ public class UpdateEmployee extends JFrame implements ActionListener {
                         String education = tfeducation.getText();
 
                         // Check if the empId is empty
-                        if (empId.isEmpty()) {
+                        if (empId.isEmpty() && empId != null) {
                             empId = cEmpID.getSelectedItem(); // Set the empId to the selected item
                         }
 
                         // Check if all required fields are filled
                         if (!fname.isEmpty() && !salary.isEmpty() && !address.isEmpty() && !phone.isEmpty()
                                 && !email.isEmpty() && !education.isEmpty()) {
+                            System.out.println(employeeID);
                             // Create the updated data line
-                            String updatedLine = empId + "," + lblname.getText() + "," + fname + "," + lbldob.getText()
+                            String updatedLine = employeeID + "," + name + "," + fname + "," + dob
                                     + "," + salary + "," + address + "," + phone + "," + email + "," + education;
 
                             // Add the updated line to the list of employee records
