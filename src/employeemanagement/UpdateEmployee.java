@@ -295,6 +295,7 @@ public class UpdateEmployee extends JFrame implements ActionListener {
     public void actionPerformed(ActionEvent ae) {
         // If the Update button is clicked
         if (ae.getSource() == updateBtn) {
+            // Retrieveing the unchanged value
             String employeeID = !empId.isEmpty() ? empId : cEmpID.getSelectedItem();
             String name = lblname.getText();
             String dob = lbldob.getText();
