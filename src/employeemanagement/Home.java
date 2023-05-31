@@ -11,12 +11,13 @@ package employeemanagement;
 
 import java.awt.*;
 import java.awt.event.*;
+import java.awt.geom.RoundRectangle2D;
 import javax.swing.*;
 
 // Code implementation and logic go here
 public class Home extends JFrame implements ActionListener {
 
-    JButton addBtn, viewBtn, updateBtn, removeBtn; // Declaring all the buttons
+    RoundedButton addBtn, viewBtn, updateBtn, removeBtn; // Declaring all the custom  buttons
 
     // Constructor
     Home() {
@@ -41,31 +42,39 @@ public class Home extends JFrame implements ActionListener {
         add(heading);
 
         // Showing buttons
-        addBtn = new JButton("Add Employee");
+        addBtn = new RoundedButton("Add Employee");
         addBtn.setBounds(330, 290, 200, 60);
         Font buttonFont4 = addBtn.getFont().deriveFont(16f); // Create a font with a larger size
         addBtn.setFont(buttonFont4);
+        addBtn.setBackground(Color.BLACK);
+        addBtn.setForeground(Color.WHITE);
         addBtn.addActionListener(this); // Register an action listener
         image.add(addBtn);
 
-        viewBtn = new JButton("View Employees");
+        viewBtn = new RoundedButton("View Employees");
         viewBtn.setBounds(600, 290, 200, 60);
         Font buttonFont3 = viewBtn.getFont().deriveFont(16f); // Create a font with a larger size
         viewBtn.setFont(buttonFont3);
+        viewBtn.setBackground(Color.BLACK);
+        viewBtn.setForeground(Color.WHITE);
         viewBtn.addActionListener(this); // Register an action listener
         image.add(viewBtn);
 
-        updateBtn = new JButton("Update Employee");
+        updateBtn = new RoundedButton("Update Employee");
         updateBtn.setBounds(330, 380, 200, 60);
         Font buttonFont2 = updateBtn.getFont().deriveFont(16f); // Create a font with a larger size
         updateBtn.setFont(buttonFont2);
+        updateBtn.setBackground(Color.BLACK);
+        updateBtn.setForeground(Color.WHITE);
         updateBtn.addActionListener(this); // Register an action listener
         image.add(updateBtn);
 
-        removeBtn = new JButton("Remove Employee");
+        removeBtn = new RoundedButton("Remove Employee");
         removeBtn.setBounds(600, 380, 200, 60);
         Font buttonFont = removeBtn.getFont().deriveFont(16f); // Create a font with a larger size
         removeBtn.setFont(buttonFont);
+        removeBtn.setBackground(Color.BLACK);
+        removeBtn.setForeground(Color.WHITE);
         removeBtn.addActionListener(this); // Register an action listener
         image.add(removeBtn);
 
@@ -108,4 +117,51 @@ public class Home extends JFrame implements ActionListener {
         new Home(); // Create an instance of the Home class
     }
 
+}
+
+class RoundedButton extends JButton {
+
+    private static final int ARC_WIDTH = 20;  // The width of the button's rounded corners
+    private static final int ARC_HEIGHT = 20; // The height of the button's rounded corners
+
+    public RoundedButton(String text) {
+        super(text);
+        init();
+    }
+
+    private void init() {
+        setContentAreaFilled(false); // Set the content area to be transparent
+        setFocusPainted(false); // Remove focus painting
+        setBorderPainted(false); // Remove border painting
+        setOpaque(false); // Make the button background transparent
+    }
+
+    @Override
+    protected void paintComponent(Graphics g) {
+        Graphics2D g2 = (Graphics2D) g.create();
+        g2.setRenderingHint(RenderingHints.KEY_ANTIALIASING, RenderingHints.VALUE_ANTIALIAS_ON);
+
+        int width = getWidth();
+        int height = getHeight();
+
+        Shape shape = new RoundRectangle2D.Double(0, 0, width - 1, height - 1, ARC_WIDTH, ARC_HEIGHT); // Create the shape of the rounded rectangle
+        g2.setColor(getBackground()); // Set the button background color
+        g2.fill(shape); // Fill the shape with the background color
+
+        g2.setColor(getForeground()); // Set the button text color
+        g2.setFont(getFont()); // Set the button text font
+
+        FontMetrics fontMetrics = g2.getFontMetrics();
+        Rectangle textBounds = fontMetrics.getStringBounds(getText(), g2).getBounds();
+        int textX = (width - textBounds.width) / 2; // Calculate the x-coordinate to center the text horizontally
+        int textY = (height - textBounds.height) / 2 + fontMetrics.getAscent(); // Calculate the y-coordinate to center the text vertically
+
+        g2.drawString(getText(), textX, textY); // Draw the button text
+        g2.dispose(); // Dispose the Graphics2D object
+    }
+
+    @Override
+    protected void paintBorder(Graphics g) {
+        // Do not paint the border
+    }
 }
