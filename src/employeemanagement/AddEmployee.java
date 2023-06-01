@@ -13,7 +13,6 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import com.toedter.calendar.JDateChooser;
-import java.awt.geom.RoundRectangle2D;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.io.*;

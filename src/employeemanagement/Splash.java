@@ -13,8 +13,6 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
-import java.awt.geom.RoundRectangle2D;
-
 // Code implementation and logic go here
 public class Splash extends JFrame implements ActionListener {
 
