@@ -33,7 +33,7 @@ Employee data is stored in a text file in the OS file system. The program reads 
 
 To run the Employee Management System, ensure you have Java Development Kit (JDK) installed on your system. Follow these steps:
 
-1. Clone this repository: `git clone <https://github.com/akibahmed229/Java-CRUD-App.git>`
+1. Clone this repository: `git clone https://github.com/akibahmed229/Java-CRUD-App.git`
 2. Open the project in your preferred Java IDE.
 3. Build and compile the project.
 4. Run the application.
