@@ -1,9 +1,19 @@
+/*
+ * Employee Management - Remove Employee
+ * Author: Akib Ahmed
+ * Project: Employee Management System
+ * Created: 2023-05-28
+ * Last Modified: 2023-05-29
+ * Description: This screen introduces a modification to the JButton component, transforming it into a rounded button.
+ */
+// Import statements and class declaration go here
 package employeemanagement;
 
 import java.awt.*;
 import java.awt.geom.RoundRectangle2D;
 import javax.swing.*;
 
+// Code implementation and logic go here
 public class RoundedButton extends JButton {
 
     private static final int ARC_WIDTH = 20;  // The width of the button's rounded corners
