@@ -96,6 +96,39 @@ public class RemoveEmployee extends JFrame implements ActionListener {
         lblEmailDb.setBounds(170, 210, 200, 30);
         add(lblEmailDb);
 
+        // Showing text Employee Address
+        JLabel lblAddress = new JLabel("Address :");
+        lblAddress.setFont(new Font("Serif", Font.BOLD, 17));
+        lblAddress.setBounds(50, 240, 120, 30);
+        add(lblAddress);
+
+        JLabel lblAddressDb = new JLabel();
+        lblAddressDb.setFont(new Font("Serif", Font.BOLD, 17));
+        lblAddressDb.setBounds(170, 240, 200, 30);
+        add(lblAddressDb);
+
+        // Showing text Employee Salary
+        JLabel lblSalary = new JLabel("salary :");
+        lblSalary.setFont(new Font("Serif", Font.BOLD, 17));
+        lblSalary.setBounds(50, 270, 120, 30);
+        add(lblSalary);
+
+        JLabel lblSalaryDb = new JLabel();
+        lblSalaryDb.setFont(new Font("Serif", Font.BOLD, 17));
+        lblSalaryDb.setBounds(170, 270, 200, 30);
+        add(lblSalaryDb);
+
+        // Showing text Employee ID
+        JLabel lblEmpID2 = new JLabel("Employee ID :");
+        lblEmpID2.setFont(new Font("Serif", Font.BOLD, 17));
+        lblEmpID2.setBounds(50, 300, 120, 30);
+        add(lblEmpID2);
+
+        JLabel lblEmpIDDb = new JLabel();
+        lblEmpIDDb.setFont(new Font("Serif", Font.BOLD, 17));
+        lblEmpIDDb.setBounds(170, 300, 200, 30);
+        add(lblEmpIDDb);
+
         // Read the file and retrieve the employee details based on empId
         try {
             BufferedReader reader = new BufferedReader(new FileReader(filePath));
@@ -108,7 +141,10 @@ public class RemoveEmployee extends JFrame implements ActionListener {
                 // Check if the first field (empId) matches the desired empId
                 if (fields.length > 0 && fields[0].equals(cEmpID.getSelectedItem())) {
                     // Set the retrieved employee details to the corresponding text fields
+                    lblEmpIDDb.setText(fields[0]);
                     lblNameDb.setText(fields[1]);
+                    lblSalaryDb.setText(fields[4]);
+                    lblAddressDb.setText(fields[5]);
                     lblPhoneDb.setText(fields[6]);
                     lblEmailDb.setText(fields[7]);
 
@@ -136,7 +172,10 @@ public class RemoveEmployee extends JFrame implements ActionListener {
                         // Check if the first field (empId) matches the desired empId
                         if (fields.length > 0 && fields[0].equals(cEmpID.getSelectedItem())) {
                             // Set the retrieved employee details to the corresponding text fields
+                            lblEmpIDDb.setText(fields[0]);
                             lblNameDb.setText(fields[1]);
+                            lblSalaryDb.setText(fields[4]);
+                            lblAddressDb.setText(fields[5]);
                             lblPhoneDb.setText(fields[6]);
                             lblEmailDb.setText(fields[7]);
 
@@ -245,4 +284,3 @@ public class RemoveEmployee extends JFrame implements ActionListener {
         new RemoveEmployee();
     }
 }
-
